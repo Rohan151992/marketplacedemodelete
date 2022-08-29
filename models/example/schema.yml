@@ -78,7 +78,7 @@ models:
           - not_null
 
 metrics:
-  - name: new_customers
+  - name: rohan_new_customers
     label: Rohan New Customers
     model: ref('customers')
     description: "Rohan The number of paid customers using the product"
@@ -100,7 +100,7 @@ metrics:
         operator: '>='
         value: '50'
     
-  - name: total_orders
+  - name: rohan_total_orders
     label: Rohan Total orders
     model: ref('orders')
     description: "Rohan Total order amount"
