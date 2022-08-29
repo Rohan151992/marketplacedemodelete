@@ -2,8 +2,8 @@
 version: 2
 
 models:
-  - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customers orders
+  - name: Rohan customers
+    description: Rohan This table has basic information about a customer, as well as some derived facts based on a customers orders
 
     columns:
       - name: customer_id
@@ -45,8 +45,8 @@ models:
       - name: customer_lifetime_value
         description: Total value (USD) of a customers orders
 
-  - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+  - name: Rohan orders
+    description: Rohan This table has basic information about orders, as well as some derived facts based on payments
 
     columns:
       - name: order_trip_id
@@ -79,9 +79,9 @@ models:
 
 metrics:
   - name: new_customers
-    label: New Customers
+    label: Rohan New Customers
     model: ref('customers')
-    description: "The number of paid customers using the product"
+    description: "Rohan The number of paid customers using the product"
 
     type: count
     sql: customer_id # superfluous here, but shown as an example
@@ -101,9 +101,9 @@ metrics:
         value: '50'
     
   - name: total_orders
-    label: Total orders
+    label: Rohan Total orders
     model: ref('orders')
-    description: "Total order amount"
+    description: "Rohan Total order amount"
 
     type: sum
     sql: amount
